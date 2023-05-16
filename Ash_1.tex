@@ -2,6 +2,11 @@
 \let\negthickspace\undefined
 \documentclass[journal,12pt]{IEEEtran}
 
+\documentclass[a4paper,11pt]{article}
+%\documentclass[a4paper,11pt]{scrartcl}
+\usepackage{amsmath} 
+\usepackage[utf8]{inputenc}
+
 \def\P(#1){\Phelper#1|\relax\Pchoice(#1)}
 \def\Phelper#1|#2\relax{\ifx\relax#2\relax\def\Pchoice{\Pone}\else\def\Pchoice{\Ptwo}\fi}
 \def\Pone(#1){\Pr\left( #1 \right)}
@@ -87,6 +92,7 @@ columns=fullflexible
 \providecommand{\abs}[1]{\left\vert#1\right\vert}
 \providecommand{\res}[1]{\Res\displaylimits_{#1}} 
 \providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+
 %\providecommand{\norm}[1]{\lVert#1\rVert}
 \providecommand{\mtx}[1]{\mathbf{#1}}
 \providecommand{\mean}[1]{E\left[ #1 \right]}
@@ -139,6 +145,8 @@ the digit 0?\\
 
 \textbf{Solution}:\\
 
+Parameters used and their values :\\
+
 \begin{tabular}{|c|c|c|}
 \hline
 Variable & Definition & Value\\
@@ -157,16 +165,22 @@ Here, we need that none of the balls are marked
 0, i.e. $X=0$\\
 
 By binomial mass disribution function :\\
-$$ n = 4   .......(1)$$
-$$ p = \frac{1}{10}    .......(2)$$
 
-$$ \P(X=0) = \Comb{n}{0} \times (p)^0 \times (1-p)^4  .......(3)$$
+
+\begin{align}
+n &= 4\\
+p &= \frac{1}{10}
+\end{align}
+
+
+\begin{align}
+\P(X=0) &= \Comb{n}{0} \times (p)^0 \times (1-p)^4 
+\end{align}
 
 $$ \P(X=0) = \Comb{4}{0} \times \left(\frac{1}{10}\right)^0 \times \left(\frac{9}{10}\right)^4 $$
-
-$$ \P(X=0) = 1 \times 1\times \left(\frac{9}{10}\right)^4 $$
-
+$$ \P(X=0) = \times 1\times \left(\frac{9}{10}\right)^4 $$
 $$ \P(X=0) = \left(\frac{9}{10}\right)^4 $$
 
-\end{document}
 
+
+\end{document}
